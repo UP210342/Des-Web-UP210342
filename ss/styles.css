@@ -1,0 +1,164 @@
+:root {
+    --primary-color-gray: #6E7886;
+    --color-icon-comentario: rgb(29, 161, 242);
+    --color-icon-comentario-50: rgb(29,161,242,0.4);
+    --color-icon-retweet: rgb(24,176,95);
+    --color-icon-retweet-50: rgba(24,176,95,0.4);
+    --color-icon-like: rgb(224,36,94);
+    --color-icon-like-50: rgba(224,36,94,0.4);
+    --color-icon-compartir: rgb(30,148,221);
+    --color-icon-compartir-50: rgba(30,148,221,0.4);
+}
+
+* {
+    /*esta estructura es para estilos de forma universal*/
+    background-color: #15202B;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 0%;
+    margin: 0%;
+}
+
+a {
+    color: rgb(71, 71, 239);
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img, svg{
+    max-width: 100% ;
+    max-height: auto;
+}
+
+.textGray{
+    color: var(--primary-color-gray);
+}
+
+.containerTweet{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    width: 650px;
+    height: 450px;
+    border: solid var(--primary-color-gray);
+    border-width: 1px;
+    border-color: transparent transparent var(--primary-color-gray) transparent;
+}
+.tweetBody{
+    grid-column: 1/13;
+    grid-row: 1/11;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+.tweetBody p {
+    padding: 10px 0px;
+}
+
+.tweetAvatar img{
+    width: 70%;
+    border-radius:50%;
+    margin: 10px;
+    
+}
+.tweetIcons{
+    grid-column: 1/13;
+    grid-row: 12/13;
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-evenly;
+}
+
+.tweetIcons .icon:nth-child(1):hover span {
+    color: var(--color-icon-comentario);
+} 
+.tweetIcons .icon:nth-child(1):hover svg {
+    border-radius: 50%;
+    background-color: var(--color-icon-comentario-50);
+    fill: var(--color-icon-comentario);
+    color: var(--color-icon-comentario);
+}
+.tweetIcons .icon:nth-child(1):hover span, .tweetIcons .icon:nth-child(1):hover svg {
+    transition-duration: 0.3s;
+}
+
+.tweetIcons .icon:nth-child(2):hover span {
+    color: var(--color-icon-retweet);
+} 
+.tweetIcons .icon:nth-child(2):hover svg {
+    border-radius: 50%;
+    background-color: var(--color-icon-retweet-50);
+    fill: var(--color-icon-retweet);
+    color: var(--color-icon-retweet);
+}
+.tweetIcons .icon:nth-child(2):hover span, .tweetIcons .icon:nth-child(2):hover svg {
+    transition-duration: 0.3s;
+}
+
+.tweetIcons .icon:nth-child(3):hover span {
+    color: var(--color-icon-like);
+} 
+.tweetIcons .icon:nth-child(3):hover svg {
+    border-radius: 50%;
+    background-color: var(--color-icon-like-50);
+    fill: var(--color-icon-like);
+    color: var(--color-icon-like);
+}
+.tweetIcons .icon:nth-child(3):hover span, .tweetIcons .icon:nth-child(3):hover svg {
+    transition-duration: 0.3s;
+}
+
+.tweetIcons .icon:nth-child(4):hover span {
+    color: var(--color-icon-compartir);
+} 
+.tweetIcons .icon:nth-child(4):hover svg {
+    border-radius: 50%;
+    background-color: var(--color-icon-compartir-50);
+    fill: var(--color-icon-compartir);
+    color: var(--color-icon-compartir);
+}
+.tweetIcons .icon:nth-child(4):hover span, .tweetIcons .icon:nth-child(4):hover svg {
+    transition-duration: 0.3s;
+}
+
+.tweetContent{
+    display: grid;
+}
+
+.tweetContent img {
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color-gray);
+}
+.icon {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon svg {
+    width: 50%;
+    padding: 5px;
+    margin-right: 5px;
+    fill: var(--primary-color-gray);
+}
+
+/*
+flexbox-> unidireccional. sirve para la alineación de elementos
+
+CSS GRID -> multidireccional, se basa en el acomodo de cuadrículas
+la pantalla mide el 100%
+ apartir de ahí se va dividiendo el 100 para los demás elementos 
+ tambien se puede manejar por columnas 12x12
+*/
