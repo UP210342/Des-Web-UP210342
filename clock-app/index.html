@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock-app</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/clock.css">
+</head>
+<body>
+    <main class="container">
+        <section class="clock">
+            <header class="header-clock">
+                <h1>CLOCK APP</h1>
+            </header>
+            <article class="body-clock">
+                <div class="box hours">
+                    <span id="hours">00</span>
+                </div>
+                :
+                <div class="box minutes">
+                    <span id="minutes">00</span>
+                </div>
+                :
+                <div class="box seconds">
+                    <span id="seconds">00</span>
+                </div>
+            </article>
+            <footer class="footer-clock">
+                <form class="formAlarm" id="formAlarm">
+                    <input type="time" name="time" class="form-control">
+                    <button type="submit" class="btn">Add Alarm</button>
+                </form>
+            </footer>
+        </section>
+    </main>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
