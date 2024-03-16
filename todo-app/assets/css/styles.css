@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .userselects {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .user-container,
+  .task-container {
+    flex: 2;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  .user-tasks span {
+    margin-right: 10px;
+  }
+  
+  .user-tasks input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
