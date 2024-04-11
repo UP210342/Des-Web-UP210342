@@ -1,20 +1,17 @@
 <?php
-
 include "./partials/Connection.php";
-$titulo = $_POST['title'];
-$idusuario = $_POST['users'];
-$idtarea = $_GET['id'];
 
+$userId = $_POST['users'];
+$taskTitle = $_POST['title'];
+$completed = $_POST['completed'];
+$taskId = $_GET['id'];
 
 try {
-$agregar = $conn->prepare("update task set title=?, idUser=? where id = ?");
-$agregar->execute([$titulo, $idusuario, $idtarea]);
+    $sql = "UPDATE task SET title=?, idUser=?, completed=? WHERE id={$taskId}";
+    $state = $conn->prepare($sql);
+    $state->execute([$taskTitle, $userId, $completed]);
 
-
+    echo json_encode(["success" => true]);
 } catch (PDOException $e) {
     die($e->getMessage());
 }
-
-
-//prueba
-
