@@ -1,22 +1,20 @@
-let x = 1
-let y = 4
-let c = y - x
+const containerClicks = document.getElementById('containerClicks');
+const btnIncrement = document.querySelector('.btn-primary');
+const btnDecrement = document.querySelector('.btn-secondary');
+const btnReset = document.querySelector('.btn-reset');
+let counter = 0; 
 
-let name = "aaaa"
-let name2 = 'eeeee'
-let name3 = `iiii`; //se usa para escribir con enters en el texto ` `
+btnIncrement.onclick = function(){
+  counter++;
+  containerClicks.innerText = counter;
+}
 
-let a = true && false || false;
-let b = !false;
+btnDecrement.onclick = () => {
+  counter--;
+  containerClicks.innerText = counter;
+};
 
-let min_number = 1 < 0;
-
-alert(c)
-
-//COMENTARIOS
-
-/* COMENTARIO */
-
-let button = document.getElementById("btn");
-window.navigator;
-console.log(button);
+btnReset.onclick = () => {
+  counter = 0;
+  containerClicks.innerText = counter;
+};
